@@ -145,7 +145,7 @@ export default function DashboardPage() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl font-serif text-[#8b6d31] font-bold">
-            {t('welcome')}, {myProfile?.fullName || user?.fullName || user?.email.split('@')[0]}!
+            {t('welcome')}, {myProfile?.fullName || user?.name || user?.email?.split('@')[0]}!
           </h1>
           <p className="text-gray-500">{t('tagline')}</p>
         </div>
