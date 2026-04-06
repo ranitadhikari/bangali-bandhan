@@ -65,7 +65,7 @@ export default function MyProfilePage() {
         setMode('create');
         // Pre-fill email and phone from user account
         if (user) {
-          setProfile(prev => ({
+          setProfile((prev: any) => ({
             ...prev,
             email: user.email || '',
             phone: user.phone || ''
@@ -77,7 +77,7 @@ export default function MyProfilePage() {
         setMode('create');
         // Pre-fill email and phone from user account
         if (user) {
-          setProfile(prev => ({
+          setProfile((prev: any) => ({
             ...prev,
             email: user.email || '',
             phone: user.phone || ''
