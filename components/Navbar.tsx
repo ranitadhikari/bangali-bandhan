@@ -61,7 +61,7 @@ export default function Navbar() {
           {user && (
             <div className="hidden lg:flex items-center px-4 py-1.5 bg-cream rounded-full border border-gold/20">
               <span className="text-sm font-medium text-deep-red">
-                {tCommon('nomoshkar')}, {(user.name || user.fullName || '').split(' ')[0] || user.email.split('@')[0]}
+                {tCommon('nomoshkar')}, {(user.name || '').split(' ')[0] || user.email.split('@')[0]}
               </span>
             </div>
           )}
@@ -133,7 +133,7 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-b border-gold/10 p-4 space-y-4 animate-in slide-in-from-top duration-300">
           {user && (
             <div className="px-4 py-2 bg-cream rounded-lg border border-gold/20 mb-2">
-              <span className="text-sm font-medium text-deep-red">{tCommon('nomoshkar')}, {user.name || user.fullName}</span>
+              <span className="text-sm font-medium text-deep-red">{tCommon('nomoshkar')}, {user.name || user.email.split('@')[0]}</span>
             </div>
           )}
           <Link href="/" className="block py-2 text-gray-700 font-medium" onClick={() => setIsOpen(false)}>{t('home')}</Link>
