@@ -16,9 +16,13 @@ interface InterestCardProps {
     _id: string;
     sender?: any;
     receiver?: any;
+    fromUser?: any;
+    toUser?: any;
+    from?: any;
+    to?: any;
     status: 'pending' | 'accepted' | 'rejected';
     createdAt: string;
-    email?: string; // Add email to the interest object if it exists
+    email?: string;
   };
   type: 'received' | 'sent';
   onUpdate?: () => void;
